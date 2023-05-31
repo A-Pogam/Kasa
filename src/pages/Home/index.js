@@ -1,7 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 function Home() {
   return <h1>Accueil</h1>;
@@ -20,7 +20,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
@@ -37,11 +37,11 @@ function App() {
           <Link to="/contact">Contact</Link>
         </header>
       </div>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-      </Switch>
+      {/* <Switch> */}
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
+      {/* </Switch> */}
     </Router>
   );
 }
