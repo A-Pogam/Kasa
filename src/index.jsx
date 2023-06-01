@@ -7,15 +7,17 @@ import About from "./pages/about"
 import Error from "./pages/error"
 import Housing from "./pages/housing"
 
+import Header from './components/header'
+
 
   ReactDOM.render(
     <React.StrictMode>
         <Router>
             <Routes>
-              <Route exact path="/" component={Home} />
-              <Route path="/" component={About} />
-              <Route path="/" component={Error} />
-              <Route path="/" component={Housing} />
+              <Route path="/" element={Home} />
+              <Route path="/about" element={About} />
+              <Route path="/error" element={Error} />
+              <Route path="/housing" element={Housing} />
             </Routes>
             <Home/>
         </Router>
