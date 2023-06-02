@@ -2,10 +2,10 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import About from './pages/about'
-import Error from './pages/error'
-import Home from './pages/home'
-import Housing from './pages/housing'
+import About from './pages/about/about'
+import Error from './pages/error/error'
+import Home from './pages/home/home'
+import Housing from './pages/housing/housing'
 
 const container = document.getElementById('root')
 const root = createRoot(container)
