@@ -1,11 +1,15 @@
 import { Link } from 'react-router-dom'
+import '../styles/components/';
  
-function Header() {
+const Header = () => {
     return (
-        <nav>
-            <Link to="/">Kasa</Link>
-        </nav>
-    )
-}
+      <header className="header">
+        <div className="header-logo"
+            img src=>
+        </div>
+      </header>
+    );
+  };
+  
 
 export default Header
