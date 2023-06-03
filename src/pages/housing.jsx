@@ -1,4 +1,12 @@
-const Housing = ({ id, title, image, host, location, tags, rating }) => {
+import { useParams } from 'react-router-dom';
+import data from '../data/logements.json';
+
+const Housing = () => {
+  const { id } = useParams();
+  const housing = data.find((item) => item.id === id);
+
+  const { title, image, host, location, tags, rating } = housing;
+
   return (
     <div>
       <img src={image} alt={title} />
