@@ -23,10 +23,10 @@ const HousingCarousel = () => {
         )
       }
     >
-      {data.map((logement) => (
-        <div key={logement.id}>
-          <img src={logement.image} alt={logement.title} />
-          <p className="legend">{logement.title}</p>
+      {data.map((housing) => (
+        <div key={housing.id}>
+          <img src={housing.image} alt={housing.title} />
+          <p className="legend">{housing.title}</p>
         </div>
       ))}
     </Carousel>
