@@ -1,11 +1,12 @@
-import React from 'react';
+import Banner from "../components/banner";
+import homeBannerImg from "../assets/bannerHome.webp";
 
-function Home() {
-    return (
-        <div>
-            <h1>Chez vous, partout et ailleurs</h1>
-        </div>
-    )
-}
+const Home = () => {
+  return (
+    <div>
+      <Banner imgSrc={homeBannerImg} alt="Bannière Accueil" text="Chez vous, partout et ailleurs" />
+    </div>
+  );
+};
 
-export default Home
+export default Home;

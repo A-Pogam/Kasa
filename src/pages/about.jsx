@@ -1,10 +1,10 @@
-import React from 'react';
+import Banner from "../components/banner";
+import aboutBannerImg from "../assets/bannerAbout.webp";
 
 const About = () => {
   return (
     <div>
-      <h1>About Page</h1>
-      <p>This is the about page of our application.</p>
+      <Banner imgSrc={aboutBannerImg} alt="Bannière À propos" />
     </div>
   );
 };
