@@ -1,8 +1,12 @@
-const Housing = () => {
+const Housing = ({ id, title, image, host, location, tags, rating }) => {
   return (
     <div>
-      <h1>Housing Page</h1>
-      <p>This is the about page of our application.</p>
+      <img src={image} alt={title} />
+      <h3>{title}</h3>
+      <p>{host}</p>
+      <p>{location}</p>
+      <p>{tags}</p>
+      <p>{rating}</p>
     </div>
   );
 };
