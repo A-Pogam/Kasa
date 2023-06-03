@@ -1,36 +1,29 @@
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import React, { useState } from 'react';
 import data from '../data/logements.json';
 
-const HousingCarousel = () => {
+const HousingCarrousel = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const handlePrevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide === 0 ? data.length - 1 : prevSlide - 1));
+  };
+
+  const handleNextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide === data.length - 1 ? 0 : prevSlide + 1));
+  };
+
   return (
-    <Carousel
-      showThumbs={false}
-      showStatus={true}
-      infiniteLoop={true}
-      renderArrowPrev={(onClickHandler, hasPrev, label) =>
-        hasPrev && (
-          <button className="arrow arrow-prev" onClick={onClickHandler} title={label}>
-            &#60;
-          </button>
-        )
-      }
-      renderArrowNext={(onClickHandler, hasNext, label) =>
-        hasNext && (
-          <button className="arrow arrow-next" onClick={onClickHandler} title={label}>
-            &#62;
-          </button>
-        )
-      }
-    >
-      {data.map((housing) => (
-        <div key={housing.id}>
-          <img src={housing.image} alt={housing.title} />
-          <p className="legend">{housing.title}</p>
-        </div>
-      ))}
-    </Carousel>
+    <div className="carrousel">
+      <button className="arrow arrow-prev" onClick={handlePrevSlide}>
+        &#60;
+      </button>
+      <img src={data[currentSlide].image} alt={data[currentSlide].title} />
+      <button className="arrow arrow-next" onClick={handleNextSlide}>
+        &#62;
+      </button>
+      <div className="status">{`${currentSlide + 1}/${data.length}`}</div>
+    </div>
   );
 };
 
-export default HousingCarousel;
+export default HousingCarrousel;
