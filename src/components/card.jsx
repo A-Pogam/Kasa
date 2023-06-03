@@ -1,10 +1,10 @@
-function Card({title, pictures }) {
+const Card = ({ title, image, text }) => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', padding: 15 }}>
-            <img src={pictures} alt="freelance" height={80} width={80} />
-            <span>{title}</span>
-        </div>
-    )
-}
- 
-export default Card
+      <div className="card">
+        <img src={image} alt={title} />
+        <div className="card-text">{text}</div>
+      </div>
+    );
+  };
+
+  export default Card;
