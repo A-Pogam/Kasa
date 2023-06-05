@@ -8,12 +8,12 @@ const Housing = () => {
   const { id } = useParams();
   const housing = Logements.find((item) => item.id === id);
 
-  const { title, cover, host, location, tags, rating } = housing;
+  const { title, picture, name, location } = housing;
 
   return (
     <div>
-      <HousingId title={title} image={cover} host={host} location={location} tags={tags} rating={rating} />
       <HousingCarousel />
+      <HousingId title={title} image={picture} host={name} location={location} />
     </div>
   );
 };
