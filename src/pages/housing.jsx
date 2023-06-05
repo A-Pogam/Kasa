@@ -1,20 +1,19 @@
 import { useParams } from 'react-router-dom';
-import data from '../data/logements.json';
+import Logements from '../data/logements.json';
+
+import HousingCarousel from '../components/housingCarousel';
+import HousingId from '../components/housingId';
 
 const Housing = () => {
   const { id } = useParams();
-  const housing = data.find((item) => item.id === id);
+  const housing = Logements.find((item) => item.id === id);
 
-  const { title, image, host, location, tags, rating } = housing;
+  const { title, cover, host, location, tags, rating } = housing;
 
   return (
     <div>
-      <img src={image} alt={title} />
-      <h3>{title}</h3>
-      <p>{host}</p>
-      <p>{location}</p>
-      <p>{tags}</p>
-      <p>{rating}</p>
+      <HousingId title={title} image={cover} host={host} location={location} tags={tags} rating={rating} />
+      <HousingCarousel />
     </div>
   );
 };
