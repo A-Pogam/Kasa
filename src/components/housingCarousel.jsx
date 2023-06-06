@@ -12,6 +12,7 @@ const HousingCarousel = ({ id }) => {
   }
 
   const pictures = logement.pictures;
+  const showArrows = pictures.length > 1; // Vérifie s'il y a plus d'une photo
 
   const handlePrevSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide === 0 ? pictures.length - 1 : prevSlide - 1));
@@ -23,14 +24,20 @@ const HousingCarousel = ({ id }) => {
 
   return (
     <div className="carousel">
-      <button className="arrow arrow-prev" onClick={handlePrevSlide}>
-        <img src={arrowPreviousImg} alt="Previous" />
-      </button>
+      {showArrows && (
+        <button className="arrow arrow-prev" onClick={handlePrevSlide}>
+          <img src={arrowPreviousImg} alt="Previous" />
+        </button>
+      )}
       <img src={pictures[currentSlide]} alt={logement.title} />
-      <button className="arrow arrow-next" onClick={handleNextSlide}>
-        <img src={arrowNextImg} alt="Next" />
-      </button>
-      <div className="status">{`${currentSlide + 1}/${pictures.length}`}</div>
+      {showArrows && (
+        <button className="arrow arrow-next" onClick={handleNextSlide}>
+          <img src={arrowNextImg} alt="Next" />
+        </button>
+      )}
+      {showArrows && (
+        <div className="status">{`${currentSlide + 1}/${pictures.length}`}</div>
+      )}
     </div>
   );
 };
