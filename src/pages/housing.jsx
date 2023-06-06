@@ -13,13 +13,19 @@ const Housing = () => {
     return <Error />;
   }
 
-  const { title, location, host } = housing;
+  const { title, location, host, tags } = housing;
 
   return (
     <div>
-      <HousingCarousel id={id} />
-      <HousingId title={title} location={location} host={host} />
-    </div>
+    <HousingCarousel id={id} />
+    <HousingId title={title} location={location} host={host} />
+
+    <ul>
+      {tags.map((tag) => (
+        <li key={tag}>{tag}</li>
+      ))}
+    </ul>
+  </div>
   );
 };
 
