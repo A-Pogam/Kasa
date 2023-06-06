@@ -5,7 +5,7 @@ import HousingCarousel from '../components/housingCarousel';
 import HousingId from '../components/housingId';
 import Error from '../pages/error';
 import HousingRating from '../components/housingRating';
-import HousingCollapse from '../components/housingCollapse';
+import Collapse from "../components/Collapse";  
 
 const Housing = () => {
   const { id } = useParams();
@@ -27,8 +27,8 @@ const Housing = () => {
         ))}
       </ul>
       <HousingRating rating={rating} />
-      <HousingCollapse title="Description" content={<p>{description}</p>} />
-      <HousingCollapse
+      <Collapse title="Description" content={<p>{description}</p>} />
+      <Collapse
         title="Équipements"
         content={
           <ul>

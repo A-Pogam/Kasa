@@ -1,12 +1,14 @@
-import Banner from "../components/banner";
-import aboutBannerImg from "../assets/bannerAbout.webp";
+import Collapse from "../components/Collapse";  
 
-const About = () => {
+const CollapseAbout = () => {
   return (
     <div>
-      <Banner imgSrc={aboutBannerImg} alt="Bannière À propos" />
+      <Collapse title="Fiabilité" />
+      <Collapse title="Respect" />
+      <Collapse title="Service" />
+      <Collapse title="Sécurité" />
     </div>
   );
 };
 
-export default About;
+export default CollapseAbout;
