@@ -3,7 +3,7 @@ import Logements from '../data/logements.json';
 
 import HousingCarousel from '../components/housingCarousel';
 import HousingId from '../components/housingId';
-import Error from '../pages/error'
+import Error from '../pages/error';
 
 const Housing = () => {
   const { id } = useParams();
@@ -13,12 +13,12 @@ const Housing = () => {
     return <Error />;
   }
 
-  const { title, picture, name, location } = housing;
+  const { title, location, host } = housing;
 
   return (
     <div>
-      <HousingCarousel />
-      <HousingId title={title} image={picture} host={name} location={location} />
+      <HousingCarousel id={id} />
+      <HousingId title={title} location={location} host={host} />
     </div>
   );
 };

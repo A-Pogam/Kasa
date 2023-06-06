@@ -6,8 +6,8 @@ const HousingId = (props) => {
                 <p className="housingId-location">{props.location}</p>
               </div>
               <div className="housingId-profile">
-                <p className="housingId-name">{props.name}</p>
-                <img className="housingId-profile-picture" src={props.imgSrc} alt="" />
+                <p className="housingId-name">{props.host.name}</p>
+                <img className="housingId-profile-picture" src={props.host.picture} alt={props.host.name} />
               </div>
             </div>
     );
