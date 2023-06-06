@@ -1,15 +1,17 @@
-const HousingRating = ({ rating }) => {
-  const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+import starImg from '../assets/star.png';
+import starRedImg from '../assets/starRed.png';
 
-  return (
-    <div className="star-container">
-      {stars.split('').map((star, index) => (
-        <span className="star" key={index}>
-          {star}
-        </span>
-      ))}
-    </div>
-  );
+const HousingRating = ({ rating }) => {
+  const stars = [];
+
+  for (let i = 1; i <= 5; i++) {
+    const starSrc = i <= rating ? starRedImg : starImg;
+    const star = <img src={starSrc} alt="Étoile" />;
+    stars.push(star);
+  }
+
+  return <div className="rating">{stars}</div>;
 };
 
 export default HousingRating;
+
