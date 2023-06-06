@@ -5,6 +5,7 @@ import HousingCarousel from '../components/housingCarousel';
 import HousingId from '../components/housingId';
 import Error from '../pages/error';
 import HousingRating from '../components/housingRating';
+import HousingCollapse from '../components/housingCollapse';
 
 const Housing = () => {
   const { id } = useParams();
@@ -14,19 +15,30 @@ const Housing = () => {
     return <Error />;
   }
 
-  const { title, location, host, tags, rating} = housing;
+  const { title, location, host, tags, rating, description, equipments } = housing;
 
   return (
     <div>
-    <HousingCarousel id={id} />
-    <HousingId title={title} location={location} host={host} />
-    <ul>
-      {tags.map((tag) => (
-        <li key={tag}>{tag}</li>
-      ))}
-    </ul>
-    <HousingRating rating={rating} />
-  </div>
+      <HousingCarousel id={id} />
+      <HousingId title={title} location={location} host={host} />
+      <ul>
+        {tags.map((tag) => (
+          <li key={tag}>{tag}</li>
+        ))}
+      </ul>
+      <HousingRating rating={rating} />
+      <HousingCollapse title="Description" content={<p>{description}</p>} />
+      <HousingCollapse
+        title="Équipements"
+        content={
+          <ul>
+            {equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
+          </ul>
+        }
+      />
+    </div>
   );
 };
 
