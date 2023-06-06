@@ -3,10 +3,15 @@ import Logements from '../data/logements.json';
 
 import HousingCarousel from '../components/housingCarousel';
 import HousingId from '../components/housingId';
+import Error from '../pages/error'
 
 const Housing = () => {
   const { id } = useParams();
   const housing = Logements.find((item) => item.id === id);
+
+  if (!housing) {
+    return <Error />;
+  }
 
   const { title, picture, name, location } = housing;
 

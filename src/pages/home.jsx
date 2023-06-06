@@ -10,13 +10,12 @@ const Home = () => {
       <Banner imgSrc={homeBannerImg} alt="Bannière Accueil" text="Chez vous, partout et ailleurs" />
       <div className="card-container">
         {data.map((logement) => (
-          <Link to={`/pages/housing/${logement.id}`} key={logement.id}>
-          <Card
-            key={logement.id}
-            title={logement.title}
-            image={logement.cover}
-            text={logement.title}
-          />
+          <Link to={`/housing/${logement.id}`} key={logement.id}>
+            <Card
+              id={logement.id}
+              title={logement.title}
+              image={logement.cover}
+            />
           </Link>
         ))}
       </div>
