@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import data from '../data/logements.json';
+import arrowNextImg from '../assets/arrowNext.png';
+import arrowPreviousImg from '../assets/arrowPrevious.png';
 
 const HousingCarousel = ({ id }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,11 +24,11 @@ const HousingCarousel = ({ id }) => {
   return (
     <div className="carousel">
       <button className="arrow arrow-prev" onClick={handlePrevSlide}>
-        &#60;
+        <img src={arrowPreviousImg} alt="Previous" />
       </button>
       <img src={pictures[currentSlide]} alt={logement.title} />
       <button className="arrow arrow-next" onClick={handleNextSlide}>
-        &#62;
+        <img src={arrowNextImg} alt="Next" />
       </button>
       <div className="status">{`${currentSlide + 1}/${pictures.length}`}</div>
     </div>
