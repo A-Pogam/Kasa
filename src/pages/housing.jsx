@@ -5,7 +5,7 @@ import HousingCarousel from '../components/housingCarousel';
 import HousingId from '../components/housingId';
 import Error from '../pages/error';
 import HousingRating from '../components/housingRating';
-import Collapse from "../components/Collapse";  
+import Collapse from "../components/collapse";  
 
 const Housing = () => {
   const { id } = useParams();
