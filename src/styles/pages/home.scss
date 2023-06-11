@@ -1,0 +1,29 @@
+.home {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  .banner {
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+
+
+    .card {
+      img.small-image {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        background: linear-gradient(#FFFFFF 0%, #000000 50%);
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@ import HousingId from '../components/housingId';
 import Error from '../pages/error';
 import HousingRating from '../components/housingRating';
 import Collapse from "../components/collapse";  
+import "../styles/pages/housing.scss"
 
 const Housing = () => {
   const { id } = useParams();
@@ -18,7 +19,7 @@ const Housing = () => {
   const { title, location, host, tags, rating, description, equipments } = housing;
 
   return (
-    <div>
+    <div className="housing">
       <HousingCarousel id={id} />
       <HousingId title={title} location={location} host={host} />
       <ul>
