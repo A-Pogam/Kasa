@@ -1,29 +1,70 @@
-.home {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  font-family: 'Montserrat';
   max-width: 1440px;
   margin: auto;
-  display: flex;
+} 
+
+.home {
   flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    .nav-text {
+      display: flex;
+      justify-content: flex-end;
+      list-style-type: none;
+      gap: 50px;
+      .nav-link {
+        color: #FF6060;
+        text-decoration: none;
+        &.active,
+        &:hover {
+          text-decoration: underline;
+      }
+    }
+    }
+}
 
   .banner {
-    border-radius: 10px;
+    border-radius: 20px;
     text-align: center;
+    .banner-container-img {
+      border-radius: 20px;
+      background-color: black;
+    }
+    .banner-container-text {
+      position: absolute;
+      font-size: 48px;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+    }    
   }
 
   .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 40px;
     width: 80%;
     margin: auto;
+    background-color: #F6F6F6;
+    padding: 50px;
+    border-radius: 20px;
 
 
     .card {
       img.small-image {
         max-width: 100%;
-        height: auto;
+        height: 340px;
         object-fit: cover;
-        background: linear-gradient(#FFFFFF 0%, #000000 50%);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
       }
     }
   }
-}

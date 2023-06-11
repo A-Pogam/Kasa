@@ -1,28 +1,36 @@
 import logo from '../assets/logoHead.svg'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
-    return (
-      <header className="header">
-        <div className="header-logo">
-          <img src={logo} alt="logo de Kaza"></img>
-        </div>
-        <nav className="nav-bar"></nav>
-        <ul>
+  const location = useLocation();
+
+  return (
+    <header className="header">
+      <div className="header-logo">
+        <img src={logo} alt="logo de Kaza" />
+      </div>
+      <nav className="nav-bar">
+        <ul className="nav-text">
           <li>
-            <Link className="home-nav" to="/">
+            <Link
+              className={`home-nav nav-link ${location.pathname === '/' ? 'active' : ''}`}
+              to="/"
+            >
               Accueil
             </Link>
-            </li>
-            <li>
-            <Link className="about-nav" to="/about">
+          </li>
+          <li>
+            <Link
+              className={`about-nav nav-link ${location.pathname === '/about' ? 'active' : ''}`}
+              to="/about"
+            >
               A Propos
             </Link>
           </li>
         </ul>
-      </header>
-    );
-  };
-  
+      </nav>
+    </header>
+  );
+};
 
-export default Header
+export default Header;
