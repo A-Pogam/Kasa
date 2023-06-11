@@ -2,69 +2,116 @@
 
 * {
   font-family: 'Montserrat';
-  max-width: 1440px;
-  margin: auto;
-} 
+}
 
 .home {
   flex-direction: column;
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 45px 9% 50px 9%;
+
+  .nav-text {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    .nav-text {
-      display: flex;
-      justify-content: flex-end;
-      list-style-type: none;
-      gap: 50px;
-      .nav-link {
-        color: #FF6060;
-        text-decoration: none;
-        &.active,
-        &:hover {
-          text-decoration: underline;
+    list-style-type: none;
+    gap: 50px;
+
+    .nav-link {
+      color: #ff6060;
+      text-decoration: none;
+
+      &.active,
+      &:hover {
+        text-decoration: underline;
       }
     }
+  }
+
+  .header-logo {
+    img {
+      height: 60px; /* Taille initiale du logo */
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    .header-logo img {
+      height: 50px; /* Taille du logo pour les écrans jusqu'à 768px */
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .header-logo img {
+      height: 40px; /* Taille du logo pour les écrans jusqu'à 600px */
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .header-logo img {
+      height: 30px; /* Taille du logo pour les écrans jusqu'à 375px */
+    }
+
+    .nav-text {
+      margin: 20px 9% 27px 9%;
+    }
+  }
 }
 
-  .banner {
+.banner {
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 20px;
+
+  .banner-container-img {
     border-radius: 20px;
-    text-align: center;
-    .banner-container-img {
-      border-radius: 20px;
-      background-color: black;
-    }
-    .banner-container-text {
-      position: absolute;
-      font-size: 48px;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-    }    
+    background-color: black;
+  }
+
+  .banner-container-text {
+    position: absolute;
+    font-size: 48px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 80%;
+  margin: auto;
+  background-color: #f6f6f6;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.card {
+  img.small-image {
+    max-width: 100%;
+    height: 340px;
+    object-fit: cover;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header {
+    margin: 20px 9% 27px 9%;
+  }
+
+  .banner-container-text {
+    font-size: 36px;
   }
 
   .card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    width: 80%;
-    margin: auto;
-    background-color: #F6F6F6;
-    padding: 50px;
-    border-radius: 20px;
-
-
-    .card {
-      img.small-image {
-        max-width: 100%;
-        height: 340px;
-        object-fit: cover;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-      }
-    }
+    padding: 20px;
   }
+}
