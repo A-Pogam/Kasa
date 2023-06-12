@@ -55,10 +55,6 @@
     .header-logo img {
       height: 30px; /* Taille du logo pour les écrans jusqu'à 375px */
     }
-
-    .nav-text {
-      margin: 20px 9% 27px 9%;
-    }
   }
 }
 
@@ -123,7 +119,7 @@
       font-size: 10px;
       top: 74%;
       left: 27%;
-      width: calc(100% - 36% * 1.6);
+      width: 30%;
     }
   }
 }
@@ -131,11 +127,12 @@
 
 @media screen and (max-width: 800px) {
   .header {
-    margin: 20px 9% 27px 9%;
+    margin: 20px;
   }
 
   .banner-container-text {
     font-size: 36px;
+    
   }
 
   .card-container {
