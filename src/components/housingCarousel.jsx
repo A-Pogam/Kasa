@@ -29,7 +29,7 @@ const HousingCarousel = ({ id }) => {
           <img src={arrowPreviousImg} alt="Previous" />
         </button>
       )}
-      <img src={pictures[currentSlide]} alt={logement.title} />
+      <img className="carousel-image" src={pictures[currentSlide]} alt={logement.title} />
       {showArrows && (
         <button className="arrow arrow-next" onClick={handleNextSlide}>
           <img src={arrowNextImg} alt="Next" />

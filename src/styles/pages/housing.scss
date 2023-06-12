@@ -1,6 +1,9 @@
 .housing {
   max-width: 1440px;
   margin: auto;
+  color: #ff6060;
+  position: relative;
+
 
   &__host {
     display: flex;
@@ -12,3 +15,45 @@
     }
   }
 }
+
+  .carousel-image {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+.arrow-prev {
+  position: absolute;
+  top: 22%;
+  left: 3%;
+  transform: translate(-50%, -50%); // a supprimer ?
+  background-color: transparent;
+  border: none; /* Supprime la bordure */
+  justify-content: center;
+  text-align: center;
+}
+
+.arrow-next{
+  position: absolute;
+  top: 22%;
+  left: 97%;
+  transform: translate(-50%, -50%); // à supprimer ?
+  background-color: transparent;
+  font-size: 24px; // Modifier la taille de la police selon vos besoins
+  border: none; /* Supprime la bordure */
+  
+}
+
+.status {
+  position: absolute;
+  font-size: 2vw; //en pourcentage de la largeur de la fenêtre
+  left: 50%;
+  transform: translate(-50%, -140%);
+  color: #fff;
+  display: flex;
+  justify-content: center; /* Centre le texte horizontalement */
+  align-items: center; /* Centre le texte verticalement */
+}
+
+
