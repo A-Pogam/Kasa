@@ -1,10 +1,8 @@
 const HousingTags = (props) => {
     return (
-        <div className="tags">
-            <ul className="tags-list">
-                <li>{props.tags}</li>
+            <ul>
+                <li className="tags">{props.tags}</li>
             </ul>
-        </div>
     );
   };
   

@@ -82,7 +82,21 @@
   }
 }
 
-.tags {
+.tags-list {
+  display: flex;
   color: #fff;
-  background-color: #ff6060;
+  list-style: none;
+  padding-left: 0px;
+
+  .tags-info {
+    background-color: #ff6060;
+    padding: 5px; // Ajoute un espacement interne de 5 pixels
+    margin: 5px; // Ajoute un espacement externe de 5 pixels
+    border-radius: 25px;
+    padding: 3px 15px 3px 15px;
+  }
+}
+
+.rating {
+  float: right;
 }

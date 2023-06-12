@@ -22,12 +22,14 @@ const Housing = () => {
     <div className="housing">
       <HousingCarousel id={id} />
       <HousingId title={title} location={location} host={host} />
-      <ul>
+      <ul className="tags-list">
         {tags.map((tag) => (
-          <li key={tag}>{tag}</li>
+          <li className="tags-info" key={tag}>{tag}</li>
         ))}
       </ul>
+      <div className='rating-container'>
       <HousingRating rating={rating} />
+      </div>
       <Collapse title="Description" content={<p>{description}</p>} />
       <Collapse
         title="Équipements"
