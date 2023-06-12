@@ -56,4 +56,33 @@
   align-items: center; /* Centre le texte verticalement */
 }
 
+.id {
+  display: flex;
+  justify-content: space-between;
+}
 
+.id-container {
+  h1 {
+    font-size: 1.8vw;
+  }
+  p {
+    font-size: 1.2vw;
+  }
+}
+
+.housingId-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2vw;
+
+  .housingId-profile-picture {
+    border-radius: 100px;
+    height: 70%;
+  }
+}
+
+.tags {
+  color: #fff;
+  background-color: #ff6060;
+}
