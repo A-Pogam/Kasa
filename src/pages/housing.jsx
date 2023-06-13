@@ -22,6 +22,7 @@ const Housing = () => {
     <div className="housing">
       <HousingCarousel id={id} />
       <HousingId title={title} location={location} host={host} />
+      <div className="tags-and-rating-container">
       <ul className="tags-list">
         {tags.map((tag) => (
           <li className="tags-info" key={tag}>{tag}</li>
@@ -29,6 +30,7 @@ const Housing = () => {
       </ul>
       <div className='rating-container'>
       <HousingRating rating={rating} />
+      </div>
       </div>
       <Collapse title="Description" content={<p>{description}</p>} />
       <Collapse
