@@ -86,44 +86,45 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
 
-.tags-list {
-  display: flex;
-  color: #fff;
-  list-style: none;
-  padding-left: 0px;
-  width: 700px;
-  text-align: center;
-  align-items: center;
+  .tags-list {
+    display: flex;
+    color: #fff;
+    list-style: none;
+    padding-left: 0;
+    width: 700px;
+    text-align: center;
+    align-items: center;
 
-  .tags-info {
-    background-color: #ff6060;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 25px;
-    padding: 3px 15px;
-
+    .tags-info {
+      background-color: #ff6060;
+      padding: 5px;
+      margin: 5px;
+      border-radius: 25px;
+      padding: 3px 15px;
+    }
   }
-}
 
-.rating-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  .rating-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
 }
 
 .description-equipements {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
 
   .description,
   .equipements {
-    flex: 0 0 40%;
+    flex: 1 1 40%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     background-color: #f6f6f6;
-    border-radius: 20px;
+    border-radius: 10px;
 
     .collapse {
       width: 100%;
@@ -139,13 +140,13 @@
       }
 
       .collapse-header {
-        height: 40px; // Ajuster la hauteur selon vos préférences
+        height: 52px;
         background-color: #ff6060;
         color: #fff;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 20px; // Ajuster le padding selon vos préférences
+        padding: 0 20px; 
         cursor: pointer;
         border-radius: 20px;
       }
@@ -156,15 +157,13 @@
       }
 
       .collapse-content {
+        height: 180px;
         padding: 10px;
         border-radius: 0 0px 20px 20px;
+        ul {
+          list-style-type: none;
+        }
       }
     }
   }
 }
-
-
-
-
-
-
