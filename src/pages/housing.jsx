@@ -3,6 +3,7 @@ import Logements from '../data/logements.json';
 
 import HousingCarousel from '../components/housingCarousel';
 import HousingId from '../components/housingId';
+import HousingIdcontainer from '../components/housingIdContainer';
 import Error from '../pages/error';
 import HousingRating from '../components/housingRating';
 import Collapse from "../components/collapse";  
@@ -21,7 +22,8 @@ const Housing = () => {
   return (
     <div className="housing">
       <HousingCarousel id={id} />
-      <HousingId title={title} location={location} host={host} />
+      <HousingId title={title} location={location} />
+      <HousingIdcontainer  host={host} />
       <div className="tags-and-rating-container">
       <ul className="tags-list">
         {tags.map((tag) => (
@@ -31,6 +33,7 @@ const Housing = () => {
       <div className='rating-container'>
       <HousingRating rating={rating} />
       </div>
+      
       </div>
       <div className='description-equipements'>
       <div className='description'>
