@@ -1,5 +1,4 @@
 import arrowUpImg from '../assets/arrowUp.svg';
-
 import React, { useState } from 'react';
 
 const HousingCollapse = ({ title, content }) => {
@@ -10,7 +9,7 @@ const HousingCollapse = ({ title, content }) => {
   };
 
   return (
-    <div className="collapse">
+    <div className={`collapse ${isOpen ? 'open' : ''}`}>
       <div className="collapse-header" onClick={toggleCollapse}>
         <h2>{title}</h2>
         <img

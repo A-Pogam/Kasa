@@ -32,7 +32,11 @@ const Housing = () => {
       <HousingRating rating={rating} />
       </div>
       </div>
+      <div className='description-equipements'>
+      <div className='description'>
       <Collapse title="Description" content={<p>{description}</p>} />
+      </div>
+      <div className='equipements'>
       <Collapse
         title="Équipements"
         content={
@@ -43,6 +47,8 @@ const Housing = () => {
           </ul>
         }
       />
+      </div>
+      </div>
     </div>
   );
 };
