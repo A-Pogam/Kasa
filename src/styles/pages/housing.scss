@@ -25,7 +25,7 @@
 
 .arrow-prev {
   position: absolute;
-  top: 22%;
+  top: 32%;
   left: 3%;
   transform: translate(-50%, -50%); // a supprimer ?
   background-color: transparent;
@@ -36,7 +36,7 @@
 
 .arrow-next{
   position: absolute;
-  top: 22%;
+  top: 32%;
   left: 97%;
   transform: translate(-50%, -50%); // à supprimer ?
   background-color: transparent;
@@ -70,6 +70,10 @@
   }
 }
 
+.housingId-container{
+width: 160px;
+}
+
 .housingId-profile {
   display: flex;
   justify-content: space-between;
@@ -77,9 +81,8 @@
   font-size: 1.2vw;
 
   .housingId-profile-picture {
-    border-radius: 100px;
-    height: 70%;
-  }
+    width: 80px; 
+    border-radius: 100px;  }
 }
 
 .tags-and-rating-container {
@@ -122,7 +125,7 @@
   .equipements {
     flex: 1 1 40%;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     background-color: #f6f6f6;
     border-radius: 10px;
 
@@ -146,7 +149,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 20px; 
+        padding: 0 20px;
         cursor: pointer;
         border-radius: 20px;
       }
@@ -164,6 +167,52 @@
           list-style-type: none;
         }
       }
+    }
+  }
+}
+
+// Media query for mobile
+@media (max-width: 767px) {
+  .tags-and-rating-container {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .tags-list {
+      width: 100%;
+    }
+
+    .rating-container {
+      justify-content: flex-start;
+    }
+
+    .housingID-container {
+      flex-direction: row;
+
+    }
+
+    .housingId-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2vw;
+      margin-top: 10px;
+
+      .housingId-profile-picture {
+        height: auto;
+        width: 30px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .description-equipements {
+    flex-direction: column;
+    align-items: normal;
+
+    .description,
+    .equipements {
+      flex: 1 1 100%;
+      margin-top: 10px;
     }
   }
 }
