@@ -1,4 +1,4 @@
-import arrowUpImg from '../assets/arrowUp.svg';
+import arrowUpImg from '../assets/arrowUp.png';
 import arrowDownImg from '../assets/arrowDown.png';
 import React, { useState } from 'react';
 

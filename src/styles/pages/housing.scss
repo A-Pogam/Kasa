@@ -120,7 +120,7 @@
       justify-content: flex-end;
     }
   }
-
+  
   .description-equipements {
     display: flex;
     flex-wrap: wrap;
@@ -162,7 +162,6 @@
 
         .collapse-icon {
           width: 20px;
-          height: 20px;
         }
 
         .collapse-content {
@@ -190,22 +189,15 @@
       .rating-container {
         justify-content: flex-start;
       }
-
-      .id-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 1.2vw;
-        margin-top: 10px;
-
-        .housingId-profile-picture {
-          height: auto;
-          width: 30px;
-          border-radius: 50%;
-        }
+  
+      .housingId-container {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 70px;
       }
     }
-
+    
+  
     .description-equipements {
       flex-direction: column;
       align-items: normal;
