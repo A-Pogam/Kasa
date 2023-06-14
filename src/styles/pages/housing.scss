@@ -105,14 +105,12 @@
     }
   }
 
+  .tagns-and-rating-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
 
-
-    .rating-container {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-    }
-  
   .description-equipements {
     display: flex;
     flex-wrap: wrap;
@@ -173,30 +171,43 @@
   /* Media query for mobile */
   @media (max-width: 767px) {
 
+    
+      .tags-list {
+        display: flex;
+        color: #fff;
+        list-style: none;
+        padding-left: 0;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+
+        .tags-info {
+          background-color: #ff6060;
+          padding: 5px;
+          margin: 5px;
+          border-radius: 25px;
+          padding: 3px 15px;
+        }
+
     .tagns-and-rating-container {
       flex-direction: column;
       align-items: flex-start;
     }
 
-    .tags-list {
-      width: 100%;
-    }
-
     .rating-container {
       justify-content: flex-start;
-    }
-
-    .housingId-container {
-      width: 100%;
-      margin-left: 0;
-      margin-top: 70%;
-    }
-
-    .description-equipements {
-      flex-direction: column;
-      align-items: normal !important;
     }
     
   }
 
+  .housingId-container {
+    display: flex;
+    align-items: flex-end;
+  }
 
+  .description-equipements {
+    display: grid !important;
+    flex-direction: column;
+  }
+
+  }
