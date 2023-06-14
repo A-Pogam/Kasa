@@ -23,13 +23,8 @@ const Housing = () => {
         <HousingCarousel id={id} />
       <div className='test'>
         <HousingId title={title} location={location} tags={tags} />
-        <HousingIdcontainer host={host} rating={rating} />
+        <HousingIdcontainer rating={rating} host={host}  />
       </div>
-      {/* <div className="tags-and-rating-container">
-        <div className='rating-container'>
-          <HousingRating rating={rating} />
-        </div>
-      </div> */}
       <div className='description-equipements'>
         <div className='description'>
           <Collapse title="Description" content={<p>{description}</p>} />

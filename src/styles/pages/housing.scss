@@ -200,9 +200,19 @@
     
   }
 
+  .test {
+    flex-direction: column;
+  }
+
   .housingId-container {
-    display: flex;
-    align-items: flex-end;
+    display: inline-flex;
+    align-items: center;
+    padding-bottom: 20px;
+    
+    .housingId-profile {
+      font-size: 12px;
+
+    }
   }
 
   .description-equipements {
