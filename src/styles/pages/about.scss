@@ -1,19 +1,18 @@
 .collapse-about {
     margin: 80px;
 
-
     .collapse {
         width: 100%;
 
         &.open {
         .collapse-header {
             background-color: #ff6060;
+            }
         }
 
         .collapse-content {
             background-color: #f6f6f6;
             color: #ff6060;
-        }
         }
 
         .collapse-header {
