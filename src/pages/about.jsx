@@ -10,11 +10,11 @@ const CollapseAbout = () => {
       <Banner imgSrc={aboutBannerImg} alt="Bannière Accueil" />
       <div className="collapse-about">
         {aboutContent.map(({ title, text }) => (
-          <Collapse title={title} key={title}>
-            <div className="collapse-content">
-              <p>{text}</p>
-            </div>
-          </Collapse>
+          <Collapse
+            title={title}
+            content={<p>{text}</p>}
+            key={title}
+          />
         ))}
       </div>
     </div>
@@ -22,3 +22,5 @@ const CollapseAbout = () => {
 };
 
 export default CollapseAbout;
+
+
