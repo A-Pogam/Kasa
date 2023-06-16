@@ -1,21 +1,25 @@
 .collapse-about {
     margin: 80px;
-
+  
     .collapse {
-        width: 100%;
+      width: 100%;
 
-        &.open {
+      p {
+        color: black;
+      }
+  
+      &.open {
         .collapse-header {
-            background-color: #ff6060;
-            }
+          background-color: #ff6060;
         }
-
-        .collapse-content {
-            background-color: #f6f6f6;
-            color: #ff6060;
-        }
-
-        .collapse-header {
+      }
+  
+      .collapse-content {
+        background-color: #f6f6f6;
+        color: #ff6060;
+      }
+  
+      .collapse-header {
         height: 52px;
         background-color: #ff6060;
         color: #fff;
@@ -25,19 +29,21 @@
         padding: 0 20px;
         cursor: pointer;
         margin: 20px;
-        }
-
-        .collapse-icon {
+      }
+  
+      .collapse-icon {
         width: 20px;
-        }
-
-        .collapse-content {
+      }
+  
+      .collapse-content {
         height: 180px;
         padding: 10px;
         border-radius: 0 0px 20px 20px;
         ul {
-            list-style-type: none;
+          list-style-type: none;
         }
-        }
+      }
     }
-}
+  
+  }
+  
