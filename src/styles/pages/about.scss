@@ -12,9 +12,9 @@
 
 
 .collapse-about {
-  margin: 0 200px 0 200px;
+  margin: 0 15vw 0 15vw;
   @media (max-width: 767px) {
-    margin: 0; /* Hauteur spécifique en mode mobile */
+    margin: 0 1vw 0 1vw !important; /* Hauteur spécifique en mode mobile */
   }
 
 
@@ -43,6 +43,11 @@
       cursor: pointer;
       margin: 30px; 
       border-radius: 5px;
+      margin: -30px 30 0 30px !important;
+
+      @media (max-width: 767px) {
+        margin: 30px 20px 0 20px !important;
+      }
       
     }
 
@@ -54,9 +59,10 @@
       height: 180px;
       padding: 10px;
       border-radius: 0 0px 20px 20px;
-      margin-top: -20px;
+      margin: -30px 30px 0 30px;
       @media (max-width: 767px) {
-        margin: -30px 30px 0 30px !important;
+        margin: 0px 20px 0 20px !important;
+
       }
       ul {
         list-style-type: none;
