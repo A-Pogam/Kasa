@@ -22,6 +22,10 @@
     list-style-type: none;
     gap: 50px;
 
+    @media (max-width: 767px) {
+      text-transform: uppercase;
+    }
+
     .nav-link {
       color: #ff6060;
       text-decoration: none;
