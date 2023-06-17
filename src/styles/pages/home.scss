@@ -109,7 +109,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  width: 80%;
+  width: 75%;
   margin: auto;
   background-color: #f6f6f6;
   padding: 50px;
@@ -158,6 +158,18 @@
   }
 }
 
+.footer {
+  background-color: black;
+  text-align: center;
+  padding-top: 40px;
+  margin: 40px -10px 0 -20px;
+
+
+  .footer-logo {
+    color: white;
+    padding-bottom: 20px;
+  }
+}
 
 @media screen and (max-width: 800px) {
   .header {
@@ -171,8 +183,9 @@
 
   .card-container {
     padding: 20px;
-    display: block;
-    width: 80%;
+    display: flex;
+    width: 86%;
+    flex-direction: column;
     .card {
       padding-bottom: 10px;
       .image-container {
@@ -187,14 +200,4 @@
   }
 }
 
-.footer {
-  background-color: black;
-  text-align: center;
-  padding-top: 40px;
-  margin-top: 40px ;
 
-  .footer-logo {
-    color: white;
-    padding-bottom: 20px;
-  }
-}
