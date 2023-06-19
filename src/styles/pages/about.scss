@@ -1,12 +1,14 @@
+.home-about {
+
 .banner {
   @media (max-width: 767px) {
-    width: 93% !important
+    width: 93% !important;
   }
 }
 
 .banner-container-img {
-  @media (max-width: 767px) {
-    height: 223px; /* Hauteur spécifique en mode mobile */
+  @media screen and (max-width: 767px) {
+    height: 223px !important; /* Hauteur spécifique en mode mobile */
   }
 }
 
@@ -46,7 +48,7 @@
       margin: -30px 30 0 30px !important;
 
       @media (max-width: 767px) {
-        margin: 30px 20px 0 20px !important;
+        margin: 30px 13px 0 13px !important;
       }
       
     }
@@ -69,4 +71,5 @@
       }
     }
   }
+}
 }

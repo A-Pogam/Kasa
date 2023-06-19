@@ -72,6 +72,9 @@
   width: 82%;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (max-width: 767px) {
+    width: 90%; /* Hauteur spécifique en mode mobile */
+  }
 
   .gradient-overlay-banner {
     position: absolute;
@@ -87,6 +90,10 @@
     border-radius: 20px;
     width: 100%;
     overflow: hidden;
+    @media screen and (max-width: 767px) {
+        height: 111px; /* Hauteur spécifique en mode mobile */
+        object-fit: fill;
+      }
   }
 
 
@@ -114,6 +121,13 @@
   background-color: #f6f6f6;
   padding: 50px;
   border-radius: 20px;
+  @media screen and (max-width: 767px) {
+    background-color: white; 
+    width: 90% !important;
+    padding: 0 !important;
+    gap: 20px;
+
+  }
 }
 
 .card {
