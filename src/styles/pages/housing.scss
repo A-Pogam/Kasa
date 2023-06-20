@@ -20,6 +20,9 @@
     height: 480px;
     object-fit: cover;
     border-radius: 20px;
+    @media screen and (max-width: 775px) {
+      height: auto;
+    }
   }
 
   .arrow-prev,
@@ -29,6 +32,9 @@
     transform: translate(-50%, -50%);
     background-color: transparent;
     border: none;
+    @media screen and (max-width: 775px) {
+      top: 22%;
+    }
   }
 
   .arrow-prev {
