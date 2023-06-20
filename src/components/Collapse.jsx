@@ -22,7 +22,6 @@ const HousingCollapse = ({ title, content }) => { // Définition du composant Ho
       {isOpen && (
         <div className="collapse-content"> {/* Contenu du collapse, affiché uniquement si isOpen est true */}
           {content} {/* Contenu dynamique du collapse */}
-          {content} {/* Contenu dynamique du collapse */}
         </div>
       )}
     </div>
