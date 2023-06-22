@@ -6,7 +6,7 @@ const HousingIdcontainer = (props) => {
 
   for (let i = 1; i <= 5; i++) {
     const starSrc = i <= props.rating ? starRedImg : starImg; // Détermine l'image à afficher en fonction de la note du logement
-    const star = <img key={i} src={starSrc} alt="Étoile" />; // Crée un élément img pour représenter une étoile
+    const star = <img key={i} src={starSrc} alt="Étoile" />; // Crée un élément img pour représenter une étoile, Si i est inférieur ou égal à la note du logement, cela signifie que l'étoile doit être affichée en rouge
     stars.push(star); // Ajoute l'étoile à la liste des étoiles
   }
 

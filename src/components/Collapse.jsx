@@ -3,10 +3,10 @@ import arrowDownImg from '../assets/arrowDown.png';
 import React, { useState } from 'react'; // Importation de React et de la fonction useState
 
 const HousingCollapse = ({ title, content }) => { // Définition du composant HousingCollapse avec les attributs title et content
-  const [isOpen, setIsOpen] = useState(false); // Utilisation de useState pour gérer l'état de l'ouverture/fermeture du collapse
+  const [isOpen, setIsOpen] = useState(false); // Utilisation de useState pour gérer l'état de l'ouverture/fermeture du collapse, ce qui signifie que le collapse est initialement fermé ( Au départ, l'état isOpen est initialisé à false, ce qui signifie que le collapse est initialement fermé)
 
   const toggleCollapse = () => { // Fonction pour basculer l'état du collapse
-    setIsOpen(!isOpen); // Inversion de la valeur actuelle de isOpen à chaque appel de la fonction
+    setIsOpen(!isOpen); // Inversion de la valeur actuelle de isOpen à chaque appel de la fonction, À chaque appel de cette fonction, elle inverse la valeur actuelle de isOpen. Si isOpen est true, elle le met à false, et vice versa
   };
 
   return (

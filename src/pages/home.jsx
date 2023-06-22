@@ -1,4 +1,3 @@
-import React from 'react'; // Importation du module React
 import Banner from "../components/banner"; // Importation du composant Banner
 import homeBannerImg from "../assets/bannerHome.webp"; // Importation de l'image de la bannière depuis les ressources
 import data from '../data/logements.json'; // Importation du fichier JSON contenant les données des logements

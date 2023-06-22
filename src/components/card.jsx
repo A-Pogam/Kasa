@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'; // Importation de la fonction Link depuis le module 'react-router-dom'
 
-const Card = ({ id, title, image, text }) => { // Définition du composant Card avec les attributs id, title, image et text
+const Card = ({ id, title, image }) => { // Définition du composant Card avec les attributs id, title, image et text
   return (
     <div className="card"> {/* Conteneur principal du composant Card */}
       <Link to={`/housing/${id}`} className="card-link"> {/* Composant Link pour créer un lien vers la page de détails du logement */}
